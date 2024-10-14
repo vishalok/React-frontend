@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +10,34 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.card {
+  perspective: 1000px;
+}
+
+.card:hover {
+  transform: rotateY(10deg);
+}
+.chart-container {
+  perspective: 1000px;
+}
+
+.chart {
+  transform: rotateX(20deg) rotateY(20deg);
+  transition: transform 0.3s;
+}
+
+.chart:hover {
+  transform: rotateX(0deg) rotateY(0deg) scale(1.05);
 }
