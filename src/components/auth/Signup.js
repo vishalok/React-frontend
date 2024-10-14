@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 const Signup = () => {
   const [username, setUsername] = useState('');
@@ -219,7 +220,9 @@ const Signup = () => {
             </div>
             <button type="submit" className="w-full bg-blue-600 text-white p-2 rounded transition duration-300 transform hover:scale-105">Sign Up</button>
             <div className="mt-4 text-center">
-              <span className="text-sm text-white">Already have an account? <a href="/login" className="text-blue-400 hover:underline">Login</a></span>
+              <span className="text-sm text-white">Already have an account? <Link to="/login" className="text-blue-400 hover:underline">
+               Login
+              </Link></span>
             </div>
           </form>
         </div>
